@@ -55,7 +55,7 @@ if ($help) {
 	my $progname=basename($0);
 	
 	print "This program will take an image file and create randomly oriented postcard-sized images from it.\n";
-	print "  It also created printable page-sized images and a composite image of all postcards pasted together.\n";
+	print "  It also creates printable page-sized images and a composite image of all postcards pasted together.\n";
 	print "  It requires ImageMagick, downloadable from http://www.imagemagick.org.\n";
 	print "  It also requires Math::Trig, downloadable from http://search.cpan.org/~jhi/Math-Complex-1.56/lib/Math/Trig.pm.\n";
 	print "\n";
