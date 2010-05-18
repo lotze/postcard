@@ -9,10 +9,11 @@ $|=1;  # autoflush output buffers
 
 use POSIX qw(ceil floor);
 use File::Path qw(mkpath);
-use Math::Trig;
-
 use Getopt::Long;
 use File::Basename;
+
+# If you don't have Math::Trig, try this:  perl -MCPAN -e 'install Math::Trig'
+require Math::Trig;
 
 ##################################################################
 # Program inputs
@@ -55,7 +56,8 @@ if ($help) {
 	
 	print "This program will take an image file and create randomly oriented postcard-sized images from it.\n";
 	print "  It also created printable page-sized images and a composite image of all postcards pasted together.\n";
-	print "  It requires ImageMagick (downloadable from http://www.imagemagick.org).\n";
+	print "  It requires ImageMagick, downloadable from http://www.imagemagick.org.\n";
+	print "  It also requires Math::Trig, downloadable from http://search.cpan.org/~jhi/Math-Complex-1.56/lib/Math/Trig.pm.\n";
 	print "\n";
 	print "Basic usage:\n";
 	print "$progname <input file>\n";

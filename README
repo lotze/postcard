@@ -1,0 +1,25 @@
+This program will take an image file and create randomly oriented postcard-sized images from it.
+  It also created printable page-sized images and a composite image of all postcards pasted together.
+  It requires ImageMagick (downloadable from http://www.imagemagick.org).
+
+Basic usage:
+make_postcards.pl <input file>
+  creates 20 postcard images, 638x825 (approx quarter-page sized for 8.5"x11" at 150 dpi) and puts them in the 'postcards' directory.
+
+Full usage:
+make_postcards.pl <input file>
+  --help                     print this help
+  --verbose                  run verbosely, with extra informative output
+  --width <width>            create postcards <width> pixels wide (default=638)
+  --height <height>          create postcards <height> pixels high (default=825)
+  --border <border width>    create postcards with a <border width>-pixel white border (default=19)
+  --num_images <num_images>  create num_images postcards (default=20)
+  --output <output folder>   put output in the <output_folder> directory (default='postcards')
+  --preview                  in addition to creating postcard and page images, create preview images showing the area for each postcard to be created
+
+Examples:
+make_postcards.pl --border 0 original.jpg
+  creates 20 postcard images from original.jpg, with no border, and puts them in the 'postcards' directory.
+make_postcards.pl --verbose --num_images 8 --preview original.jpg
+  creates 8 postcard images from original.jpg, with preview images, and puts them in the 'postcards' directory.
+
