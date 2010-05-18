@@ -1,0 +1,7 @@
+CGI wrapper (upload an image, specify parameters, view and download the output)
+
+Read from a file of location/rotations (to repeat or manually edit a postcard set)
+
+Detection of cover amount (avoid mostly-blank cards)
+
+Smarter cover selection (even greedy would be better than random)
