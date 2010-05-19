@@ -8,7 +8,7 @@ make_postcards.pl <input file>
   creates 20 postcard images, 638x825 (approx quarter-page sized for 8.5"x11" at 150 dpi) and puts them in the 'postcards' directory.
 
 Full usage:
-make_postcards.pl <input file>
+perl make_postcards.pl <input file>
   --help                     print this help
   --verbose                  run verbosely, with extra informative output
   --width <width>            create postcards <width> pixels wide (default=638)
@@ -16,11 +16,14 @@ make_postcards.pl <input file>
   --border <border width>    create postcards with a <border width>-pixel white border (default=19)
   --num_images <num_images>  create num_images postcards (default=20)
   --output <output folder>   put output in the <output_folder> directory (default='postcards')
+  --method <method>          use <method> to determine postcard locations (default='uniform'); options are 'uniform' and 'circle'
   --preview                  in addition to creating postcard and page images, create preview images showing the area for each postcard to be created
 
 Examples:
-make_postcards.pl --border 0 original.jpg
+perl make_postcards.pl --border 0 original.jpg
   creates 20 postcard images from original.jpg, with no border, and puts them in the 'postcards' directory.
-make_postcards.pl --verbose --num_images 8 --preview original.jpg
+perl make_postcards.pl --verbose --num_images 8 --preview original.jpg
   creates 8 postcard images from original.jpg, with preview images, and puts them in the 'postcards' directory.
+perl make_postcards.pl --method circle --verbose --num_images 40 noisebridge.png
+  creates 40 postcard images from noisebridge.png, using the 'circle' method, and puts them in the 'postcards' directory.
 
