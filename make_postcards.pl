@@ -157,13 +157,13 @@ sub make_postcards {
 		my $rotate_degrees = 90;
 
 		if ($center_method eq 'circle') {
-			# find a random point in the great circle around the center of the image
+			# find a random point in the circle around the center of the image
 			my $max_radius = $original_height/2;
 			if ($original_width < $original_height) {
 				$max_radius = $original_width/2;
 			}
 			my $random_theta = deg2rad(rand(361));
-			my $random_r = rand(floor($max_radius));
+			my $random_r = $max_radius * sqrt(rand());
 			$random_y = floor($random_y + $random_r * sin($random_theta));
 			$random_x = floor($random_x + $random_r * cos($random_theta));
 			# we only need to rotate up to 90 degrees to get the full range of possible rectangles
